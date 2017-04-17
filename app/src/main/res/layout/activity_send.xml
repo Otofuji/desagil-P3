@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number:" />
+        android:text="@string/text_number" />
 
     <EditText android:id="@+id/numberEdit"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Message:" />
+        android:text="@string/text_message" />
 
     <EditText android:id="@+id/messageEdit"
         android:layout_width="wrap_content"

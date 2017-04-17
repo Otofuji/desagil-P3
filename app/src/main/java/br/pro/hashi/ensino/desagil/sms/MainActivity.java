@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import br.pro.hashi.ensino.desagil.morse.R;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_EXAMPLE = 0;
