@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.pro.hashi.ensino.desagil.morse.R;
 
 
 public class SendActivity extends AppCompatActivity {

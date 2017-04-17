@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import br.pro.hashi.ensino.desagil.morse.R;
 
 public class ListActivity extends AppCompatActivity {
 
