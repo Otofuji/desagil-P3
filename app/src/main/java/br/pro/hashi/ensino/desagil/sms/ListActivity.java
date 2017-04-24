@@ -1,14 +1,25 @@
 package br.pro.hashi.ensino.desagil.sms;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Adapter;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class ListActivity extends AppCompatActivity {
+
+    private ListView listaMensagem;
+    private ListAdapter adapter;
+    private MessageList a;
+    private AdapterView.OnItemClickListener setOnItemClickListener;
+    private String mensagem;
+    private TextView mensagemView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +27,23 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         // Pega o objeto que representa a listView
-        ListView listaMensagem = (ListView) findViewById(R.id.lista_mensagem);
+        final ListView listaMensagem = (ListView) findViewById(R.id.lista_mensagem);
         //Cria o objeto com as strings
         MessageList a = new MessageList();
         //Adaptador para a listview(como vai ser exibida)
         ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, a.getListaMensagem());
         listaMensagem.setAdapter(adapter);
+        listaMensagem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mensagem = listaMensagem.getItemAtPosition(position).toString();
+                mensagemView.setText(mensagem);
+                Intent intent = new Intent(ListActivity.this, SendActivity.class);
+                //intent.putExtras(mensagem, mensagemView);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

@@ -1,5 +1,6 @@
 package br.pro.hashi.ensino.desagil.sms;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -20,8 +21,11 @@ public class SendActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
 
+        Intent intent = getIntent();
         numberEdit = (EditText) findViewById(R.id.numberEdit);
         messageEdit = (EditText) findViewById(R.id.messageEdit);
+        messageEdit.append("Preciso de água, por favor!");
+
     }
 
 
