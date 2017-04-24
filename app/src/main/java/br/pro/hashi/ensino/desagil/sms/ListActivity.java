@@ -38,9 +38,9 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 mensagem = listaMensagem.getItemAtPosition(position).toString();
                 mensagemView.setText(mensagem);
-                Intent intent = new Intent(ListActivity.this, SendActivity.class);
-                //intent.putExtras(mensagem, mensagemView);
-                startActivity(intent);
+                Intent myIntent = new Intent(ListActivity.this, SendActivity.class);
+                myIntent.putExtra("mensagemSelecionada", mensagem);
+                startActivity(myIntent);
             }
         });
 

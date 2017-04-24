@@ -20,11 +20,14 @@ public class SendActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
-
+        String mensagemDaLista;
         Intent intent = getIntent();
         numberEdit = (EditText) findViewById(R.id.numberEdit);
         messageEdit = (EditText) findViewById(R.id.messageEdit);
-        messageEdit.append("Preciso de água, por favor!");
+        Intent myIntent = getIntent();
+        Bundle extras = getIntent().getExtras();
+        mensagemDaLista= extras.getString("mensagemSelecionada");
+        messageEdit.append(mensagemDaLista);
 
     }
 
