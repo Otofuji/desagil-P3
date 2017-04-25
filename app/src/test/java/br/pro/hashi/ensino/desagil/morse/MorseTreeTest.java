@@ -12,4 +12,9 @@ public class MorseTreeTest {
     public void setUp() {
         tree = new MorseTree();
     }
+
+    @Test
+    public void toA() {
+        Assert.assertEquals('a', tree.translate(".-"));
+    }
 }
