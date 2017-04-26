@@ -69,4 +69,8 @@ public class MorseTreeTest {
     public void toN() {
         Assert.assertEquals('n', tree.translate("-."));
     }
+    @Test
+    public void toO() {
+        Assert.assertEquals('o', tree.translate("---"));
+    }
 }
