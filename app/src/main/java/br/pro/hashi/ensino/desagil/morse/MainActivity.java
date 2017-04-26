@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import br.pro.hashi.ensino.desagil.sms.R;
 
 
 public class MainActivity extends AppCompatActivity {
