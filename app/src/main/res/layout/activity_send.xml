@@ -7,7 +7,7 @@
     android:rowCount="2"
     android:columnCount="2"
     android:layout_margin="16dp"
-    tools:context="br.pro.hashi.ensino.desagil.sms.br.pro.hashi.ensino.desagil.morse.SendActivity">
+    tools:context="br.pro.hashi.ensino.desagil.morse.SendActivity">
 
     <TextView
         android:layout_width="wrap_content"
