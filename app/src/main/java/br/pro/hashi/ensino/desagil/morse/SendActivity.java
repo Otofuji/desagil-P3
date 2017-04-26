@@ -1,4 +1,4 @@
-package br.pro.hashi.ensino.desagil.sms;
+package br.pro.hashi.ensino.desagil.morse;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.pro.hashi.ensino.desagil.sms.R;
 
 
 public class SendActivity extends AppCompatActivity {

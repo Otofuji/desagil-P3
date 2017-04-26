@@ -1,11 +1,11 @@
-package br.pro.hashi.ensino.desagil.sms;
+package br.pro.hashi.ensino.desagil.morse;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
 
 
 public class ListActivity extends AppCompatActivity {

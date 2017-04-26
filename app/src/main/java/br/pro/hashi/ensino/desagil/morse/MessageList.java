@@ -1,4 +1,4 @@
-package br.pro.hashi.ensino.desagil.sms;
+package br.pro.hashi.ensino.desagil.morse;
 
 import java.util.LinkedList;
 import java.util.List;
