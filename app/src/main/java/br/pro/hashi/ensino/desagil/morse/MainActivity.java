@@ -1,4 +1,4 @@
-package br.pro.hashi.ensino.desagil.sms;
+package br.pro.hashi.ensino.desagil.morse;
 
 import android.Manifest;
 import android.content.Intent;
