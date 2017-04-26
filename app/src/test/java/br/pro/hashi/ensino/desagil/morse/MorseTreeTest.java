@@ -85,4 +85,12 @@ public class MorseTreeTest {
     public void toR() {
         Assert.assertEquals('r', tree.translate(".-."));
     }
+    @Test
+    public void toS() {
+        Assert.assertEquals('s', tree.translate("..."));
+    }
+    @Test
+    public void toT() {
+        Assert.assertEquals('t', tree.translate("-"));
+    }
 }
