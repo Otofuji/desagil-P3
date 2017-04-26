@@ -17,7 +17,6 @@ public class MorseTreeTest {
     public void toA() {
         Assert.assertEquals('a', tree.translate(".-"));
     }
-
     @Test
     public void toB() {
         Assert.assertEquals('b', tree.translate("-..."));
@@ -33,5 +32,9 @@ public class MorseTreeTest {
     @Test
     public void toE() {
         Assert.assertEquals('e', tree.translate("."));
+    }
+    @Test
+    public void toF() {
+        Assert.assertEquals('f', tree.translate("..-."));
     }
 }
