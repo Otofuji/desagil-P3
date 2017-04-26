@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void goToListActivity() {
+        Intent intent = new Intent(this, ListActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
