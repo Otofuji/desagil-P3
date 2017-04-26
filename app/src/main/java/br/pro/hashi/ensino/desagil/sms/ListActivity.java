@@ -28,12 +28,14 @@ public class ListActivity extends AppCompatActivity {
 
         // Pega o objeto que representa a listView
         final ListView listaMensagem = (ListView) findViewById(R.id.lista_mensagem);
+        final TextView mensagemView = (TextView) findViewById(R.id.cada_mensagem);
         //Cria o objeto com as strings
         MessageList a = new MessageList();
         //Adaptador para a listview(como vai ser exibida)
         ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, a.getListaMensagem());
         listaMensagem.setAdapter(adapter);
         listaMensagem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 mensagem = listaMensagem.getItemAtPosition(position).toString();
