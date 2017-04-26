@@ -30,4 +30,8 @@ public class MorseTreeTest {
     public void toD() {
         Assert.assertEquals('d', tree.translate("-.."));
     }
+    @Test
+    public void toE() {
+        Assert.assertEquals('e', tree.translate("."));
+    }
 }
