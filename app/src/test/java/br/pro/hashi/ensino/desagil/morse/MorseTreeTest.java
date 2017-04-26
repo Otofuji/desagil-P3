@@ -73,4 +73,28 @@ public class MorseTreeTest {
     public void toO() {
         Assert.assertEquals('o', tree.translate("---"));
     }
+    @Test
+    public void toP() {
+        Assert.assertEquals('p', tree.translate(".--."));
+    }
+    @Test
+    public void toQ() {
+        Assert.assertEquals('q', tree.translate("--.-"));
+    }
+    @Test
+    public void toR() {
+        Assert.assertEquals('r', tree.translate(".-."));
+    }
+    @Test
+    public void toS() {
+        Assert.assertEquals('s', tree.translate("..."));
+    }
+    @Test
+    public void toT() {
+        Assert.assertEquals('t', tree.translate("-"));
+    }
+    @Test
+    public void toU() {
+        Assert.assertEquals('u', tree.translate("..-"));
+    }
 }
