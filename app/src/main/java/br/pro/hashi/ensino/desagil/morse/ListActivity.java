@@ -21,8 +21,6 @@ public class ListActivity extends AppCompatActivity {
     private AdapterView.OnItemClickListener setOnItemClickListener;
     private String mensagem;
     private TextView mensagemView;
-    private CountDownTimer countdown;
-    private View touchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +47,9 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
-        countdown = new CountDownTimer(600,100){
-            public void onTick(long millisUntilFinished) {}
-            public void onFinish() {}
 
-
-
-        };
     }
 
-    /*public boolean onTouch(View touchView, MotionEvent event) {
-        countdown.start();
 
-    }*/
 
 }
