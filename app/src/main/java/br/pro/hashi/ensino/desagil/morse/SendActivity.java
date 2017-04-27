@@ -1,5 +1,6 @@
 package br.pro.hashi.ensino.desagil.morse;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -19,9 +20,15 @@ public class SendActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
-
+        String mensagemDaLista;
+        Intent intent = getIntent();
         numberEdit = (EditText) findViewById(R.id.numberEdit);
         messageEdit = (EditText) findViewById(R.id.messageEdit);
+        Intent myIntent = getIntent();
+        Bundle extras = getIntent().getExtras();
+        mensagemDaLista= extras.getString("mensagemSelecionada");
+        messageEdit.append(mensagemDaLista);
+
     }
 
 
