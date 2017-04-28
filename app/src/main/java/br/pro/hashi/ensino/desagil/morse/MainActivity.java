@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void goToDictActivity(View view) {
+        Intent intent = new Intent(this, DictActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     public void tryToGoToSendActivity(View view) {
         int permission = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS);

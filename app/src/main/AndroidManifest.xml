@@ -13,18 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="br.pro.hashi.ensino.desagil.morse.MainActivity">
-
-        </activity>
-        <activity android:name="br.pro.hashi.ensino.desagil.morse.SendActivity" />
-        <activity android:name="br.pro.hashi.ensino.desagil.morse.ListActivity">
-            //principal
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name="br.pro.hashi.ensino.desagil.morse.SendActivity" />
+        <activity android:name="br.pro.hashi.ensino.desagil.morse.ListActivity">
+        </activity>
+        <activity android:name="br.pro.hashi.ensino.desagil.morse.DictActivity" />
 
     </application>
 
