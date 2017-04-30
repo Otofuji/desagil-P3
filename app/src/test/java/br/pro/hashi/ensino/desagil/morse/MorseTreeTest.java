@@ -105,5 +105,9 @@ public class MorseTreeTest {
     public void toW() {
         Assert.assertEquals('w', tree.translate(".--"));
     }
+    @Test
+    public void toX() {
+        Assert.assertEquals('x', tree.translate("-..-"));
+    }
 
 }
