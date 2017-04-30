@@ -138,4 +138,8 @@ public class MorseTreeTest {
     public void to6() {
         Assert.assertEquals('6', tree.translate("-...."));
     }
+    @Test
+    public void to7() {
+        Assert.assertEquals('7', tree.translate("--..."));
+    }
 }
