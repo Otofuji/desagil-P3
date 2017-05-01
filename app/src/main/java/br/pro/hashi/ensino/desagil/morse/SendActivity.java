@@ -69,7 +69,19 @@ public class SendActivity extends AppCompatActivity {
 
     }
 
+    public void touchingTimer(boolean onTouch, CountDownTimer touching, CountDownTimer notTouching) {
+        if (onTouch == true) {
+            notTouching.cancel();
+            touching.start();
+        }
 
+        if (onTouch == false) {
+            touching.cancel();
+
+            notTouching.start();
+        }
+
+    }
 
 
 
@@ -86,6 +98,7 @@ public class SendActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Message sent to number!", Toast.LENGTH_SHORT);
             toast.show();
         }
+
         catch(IllegalArgumentException exception) {
             Log.e("SendActivity", "number or message empty");
         }
