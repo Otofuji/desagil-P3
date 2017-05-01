@@ -5,12 +5,14 @@ public class Node {
     private char value;
     private Node left;
     private Node right;
+    private Node parent;
 
     public Node(char value, Node left, Node right) {
         open = true;
         this.value = value;
         this.left = left;
         this.right = right;
+        this.parent = null;
     }
 
     public void print() {
@@ -39,11 +41,19 @@ public class Node {
     public Node getRight() {
         return right;
     }
+    public Node getParent() { return parent;}
     public void setLeft(Node left){
         this.left = left;
+        if(left != null) {
+            left.setParent(this);
+        }
     }
     public void setRight(Node right){
         this.right = right;
+        if(right != null) {
+            right.setParent(this);
+        }
     }
+    public void setParent(Node parent) {this.parent = parent;}
 }
 
