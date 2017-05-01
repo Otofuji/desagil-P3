@@ -87,9 +87,9 @@ public class SendActivity extends AppCompatActivity {
     }
 
 
-    public SendActivity(EditText numberEdit) {
-        this.numberEdit = numberEdit;
-    }
+    //public SendActivity(EditText numberEdit) {
+        //this.numberEdit = numberEdit;
+    //}
 
     public boolean onTouch(View touchView, MotionEvent event) {
         if (!startRecording) {
@@ -118,6 +118,7 @@ public class SendActivity extends AppCompatActivity {
         }
 
         if (!send) {
+            send = true;
             if (touching > 0 && notTouching > 0) {
                 if (touching > 5 * unit) {
                     Log.e("MorseTouch", "EndPhrase");
@@ -195,7 +196,7 @@ public class SendActivity extends AppCompatActivity {
                 }
             }
         }
-        return false;
+      return false;
     }
 
     public void sendMessage(View view) {
