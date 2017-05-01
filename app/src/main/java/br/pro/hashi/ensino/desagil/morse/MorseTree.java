@@ -16,13 +16,14 @@ public class MorseTree {
         return instancia;
     }
 
-    public MorseTree() {
-        char[] letras = new char[]{'+', 'e', 't', 'i', 'a', 'n', 'm', 's', 'u', 'r', 'w',
-                'd', 'k', 'g', 'o', 'h', 'v', 'f', ' ', 'l', ' ', 'p', 'j',
-                'b', 'x', 'c', 'y', 'z', 'q', ' ', ' ', '5', '4', ' ', '3',
-                ' ', ' ', ' ', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '1',
-                '6', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '7', ' ', ' ', ' ',
-                '8', ' ', '9', '0'};
+
+    public MorseTree(){
+        char [] letras = new char[] {'+', 'e', 't', 'i','a', 'n', 'm','s','u','r','w',
+                                    'd','k','g', 'o', 'h', 'v','f','_','l', '_','p','j',
+                                    'b','x','c','y','z','q','_','_','5','4','_','3',
+                                    '_',' ','_','2',' ','_','_',' ','_','_','_','1',
+                                    '6','_','_',' ','_',' ','_',' ','7',' ','_','_',
+                                    '8',' ','9','0'};
 
         Node[] nodes = new Node[64];
         for (int i = 0; i < letras.length; i++) {
@@ -59,7 +60,6 @@ public class MorseTree {
         }
         return n.getValue();
     }
-
 
     public LinkedList<String> getDicionario() {
         ConcurrentLinkedQueue<Node> queue = new ConcurrentLinkedQueue<>();

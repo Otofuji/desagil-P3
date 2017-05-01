@@ -97,4 +97,64 @@ public class MorseTreeTest {
     public void toU() {
         Assert.assertEquals('u', tree.translate("..-"));
     }
+    @Test
+    public void toV() {
+        Assert.assertEquals('v', tree.translate("...-"));
+    }
+    @Test
+    public void toW() {
+        Assert.assertEquals('w', tree.translate(".--"));
+    }
+    @Test
+    public void toX() {
+        Assert.assertEquals('x', tree.translate("-..-"));
+    }
+    @Test
+    public void toY() {
+        Assert.assertEquals('y', tree.translate("-.--"));
+    }
+    @Test
+    public void toZ() {
+        Assert.assertEquals('z', tree.translate("--.."));
+    }
+    @Test
+    public void to0() {
+        Assert.assertEquals('0', tree.translate("-----"));
+    }
+    @Test
+    public void to1() {
+        Assert.assertEquals('1', tree.translate(".----"));
+    }
+    @Test
+    public void to2() {
+        Assert.assertEquals('2', tree.translate("..---"));
+    }
+    @Test
+    public void to3() {
+        Assert.assertEquals('3', tree.translate("...--"));
+    }
+    @Test
+    public void to4() {
+        Assert.assertEquals('4', tree.translate("....-"));
+    }
+    @Test
+    public void to5() {
+        Assert.assertEquals('5', tree.translate("....."));
+    }
+    @Test
+    public void to6() {
+        Assert.assertEquals('6', tree.translate("-...."));
+    }
+    @Test
+    public void to7() {
+        Assert.assertEquals('7', tree.translate("--..."));
+    }
+    @Test
+    public void to8() {
+        Assert.assertEquals('8', tree.translate("---.."));
+    }
+    @Test
+    public void to9() {
+        Assert.assertEquals('9', tree.translate("----."));
+    }
 }
