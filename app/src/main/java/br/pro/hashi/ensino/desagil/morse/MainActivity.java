@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void goToListActivity() {
+    public void goToListActivity(View v) {
         Intent intent = new Intent(this, ListActivity.class);
         startActivity(intent);
         finish();

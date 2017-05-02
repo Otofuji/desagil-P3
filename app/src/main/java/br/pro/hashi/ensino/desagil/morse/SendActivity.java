@@ -26,8 +26,8 @@ public class SendActivity extends AppCompatActivity {
         messageEdit = (EditText) findViewById(R.id.messageEdit);
         Intent myIntent = getIntent();
         Bundle extras = getIntent().getExtras();
-        mensagemDaLista= extras.getString("mensagemSelecionada");
-        messageEdit.append(mensagemDaLista);
+       // mensagemDaLista= extras.getString("mensagemSelecionada");
+      //  messageEdit.append(mensagemDaLista);
 
     }
 
