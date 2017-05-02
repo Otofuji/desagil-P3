@@ -37,7 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal"
         android:layout_columnSpan="2"
-        android:layout_marginTop="10dp"
         android:text="Send"
         android:onClick="sendMessage" />
 
@@ -45,13 +44,14 @@
         android:id="@+id/touchView"
         android:layout_width="210dp"
         android:layout_height="210dp"
-        android:layout_marginLeft="72dp"
         android:layout_marginTop="10dp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center"
         android:background="@android:drawable/presence_invisible"
         android:backgroundTint="@color/colorPrimary"
         android:onClick="touchView"
         android:text="Morse"
-        android:textSize="100px"
+        android:textSize="90px"
         android:textColor="#FFFFFFFF"
         />
 
