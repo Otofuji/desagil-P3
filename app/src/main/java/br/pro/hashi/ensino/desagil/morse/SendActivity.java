@@ -51,7 +51,7 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
         if (v == touchView){
             string = string + '.';
         }
-        else{
+        if (v == finalPalavra){
             MorseTree arvore = MorseTree.getInstancia();
             char letra =  arvore.translate(string);
             String letter = Character.toString(letra);
