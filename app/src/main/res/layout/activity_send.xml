@@ -13,37 +13,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:text="mensagem" />
+
+    <EditText android:id="@+id/messageEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="numero" />
 
     <EditText android:id="@+id/numberEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal"
-        android:layout_marginTop="100dp"
         android:inputType="phone" />
 
-    <TextView
+    <Button
+        android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mensagem" />
-
-    <EditText android:id="@+id/messageEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill_horizontal" />
-
-    <Button android:id="@+id/sendButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill_horizontal"
         android:layout_columnSpan="2"
-        android:text="Send"
-        android:onClick="sendMessage" />
+        android:layout_gravity="fill_horizontal"
+        android:background="@android:color/holo_green_light"
+        android:onClick="sendMessage"
+        android:text="Send" />
 
     <Button
         android:id="@+id/touchView"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="10dp"
         android:layout_columnSpan="2"
         android:layout_gravity="center"
@@ -51,8 +53,17 @@
         android:backgroundTint="@color/colorPrimary"
         android:onClick="touchView"
         android:text="Morse"
-        android:textSize="90px"
+        android:textSize="50px"
         android:textColor="#FFFFFFFF"
         />
+
+    <Button
+        android:id="@+id/finalPalavra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:onClick="finalPalavra"
+        android:text="Fim da Palavra" />
 
 </GridLayout>

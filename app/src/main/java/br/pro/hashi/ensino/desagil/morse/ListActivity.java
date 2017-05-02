@@ -49,13 +49,6 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
-        countdown = new CountDownTimer(600,100){
-            public void onTick(long millisUntilFinished) {}
-            public void onFinish() {}
-
-
-
-        };
     }
 
     /*public boolean onTouch(View touchView, MotionEvent event) {
