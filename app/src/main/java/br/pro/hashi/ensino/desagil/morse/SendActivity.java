@@ -17,59 +17,6 @@ import java.util.List;
 
 import static android.R.attr.id;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.content.res.Configuration;
-import android.database.Cursor;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.provider.ContactsContract;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.PopupMenu;
-import android.telephony.PhoneNumberUtils;
-import android.telephony.SmsManager;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-<<<<<<< HEAD
-import java.util.Arrays;
-import java.util.HashMap;
-=======
-        >>>>>>> 2056af6167ca012f3160a29e1d08d4dd4075cd2f
-import java.util.List;
-
-import agile.app.morsecodeapp.morsetotext.Decoder;
-
-import static agile.app.morsecodeapp.R.array;
-import static agile.app.morsecodeapp.R.id;
-import static agile.app.morsecodeapp.R.layout;
-import static agile.app.morsecodeapp.R.string;
-
-
 public class SendActivity extends AppCompatActivity {
     private EditText numberEdit;
     private EditText messageEdit;
