@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,6 +30,20 @@ public class SendActivity extends AppCompatActivity {
        // mensagemDaLista= extras.getString("mensagemSelecionada");
       //  messageEdit.append(mensagemDaLista);
 
+        Button touchView = (Button) findViewById(R.id.touchView);
+        touchView.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 ();
+             }
+         }
+        );
+        touchView.setOnLongClickListener(new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+            // TODO Auto-generated method stub
+            return true;
+        }
+    });
     }
 
 
