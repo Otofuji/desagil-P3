@@ -21,7 +21,6 @@ public class ListActivity extends AppCompatActivity {
     private AdapterView.OnItemClickListener setOnItemClickListener;
     private String mensagem;
     private TextView mensagemView;
-    private CountDownTimer countdown;
     private View touchView;
 
     @Override
@@ -51,9 +50,5 @@ public class ListActivity extends AppCompatActivity {
         });
     }
 
-    /*public boolean onTouch(View touchView, MotionEvent event) {
-        countdown.start();
-
-    }*/
 
 }

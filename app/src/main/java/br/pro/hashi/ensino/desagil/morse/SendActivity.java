@@ -10,11 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static br.pro.hashi.ensino.desagil.morse.R.id.morseEdit;
-import static br.pro.hashi.ensino.desagil.morse.R.id.morseEdit;
-import static br.pro.hashi.ensino.desagil.morse.R.id.touchView;
-
-
 public class SendActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
     private EditText numberEdit;
     private EditText messageEdit;
