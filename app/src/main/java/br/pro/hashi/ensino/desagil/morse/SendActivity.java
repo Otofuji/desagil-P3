@@ -56,7 +56,7 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
         morseEdit.append(".");
         Log.i("sendActivity", string);
     }
-    
+
     @Override
     public boolean onLongClick(View v) {
         string = string + '_';
