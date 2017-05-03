@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static br.pro.hashi.ensino.desagil.morse.R.id.morseEdit;
+import static br.pro.hashi.ensino.desagil.morse.R.id.morseEdit;
 import static br.pro.hashi.ensino.desagil.morse.R.id.touchView;
 
 
 public class SendActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
     private EditText numberEdit;
     private EditText messageEdit;
+    private EditText morseEdit;
     private String string;
     private Button touchView;
     private Button finalPalavra;
@@ -28,47 +31,55 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_send);
         String mensagemDaLista;
         Intent intent = getIntent();
+        morseEdit = (EditText) findViewById(R.id.morseEdit);
         numberEdit = (EditText) findViewById(R.id.numberEdit);
         messageEdit = (EditText) findViewById(R.id.messageEdit);
         Intent myIntent = getIntent();
         Bundle extras = getIntent().getExtras();
-        mensagemDaLista= extras.getString("mensagemSelecionada");
-        if (mensagemDaLista != null) {
-            messageEdit.append(mensagemDaLista);
-        };
+        if (extras != null) {
+            mensagemDaLista= extras.getString("mensagemSelecionada");
+            if (mensagemDaLista != null){
+                numberEdit.setText("04115981061454");
+                messageEdit.append(mensagemDaLista);
+            }
+            else{
+                numberEdit.setText(extras.getString("numero"));
+        }}
 
         touchView = (Button) findViewById(R.id.touchView);
         touchView.setOnClickListener(this);
         touchView.setOnLongClickListener(this);
 
-        String string = "";
+        string = "";
 
 
     }
 
     @Override
     public void onClick(View v) {
-        if (v == touchView){
-            string = string + '.';
-        }
-        if (v == finalPalavra){
-            MorseTree arvore = MorseTree.getInstancia();
-            char letra =  arvore.translate(string);
-            String letter = Character.toString(letra);
-            messageEdit.append(letter);
 
-        }
-
+        string = string + '.';
+        morseEdit.append(".");
+        Log.i("sendActivity", string);
     }
     @Override
     public boolean onLongClick(View v) {
         // TODO Auto-generated method stub
         string = string + '_';
+        morseEdit.append("_");
         return true;
     }
 
-
-
+    public void wordButton (View view){
+        MorseTree arvore = MorseTree.getInstancia();
+        char letra =  arvore.translate(string);
+        String letter = Character.toString(letra);
+        if (letra != ' ') {
+            messageEdit.append(letter);
+        }
+        string = "";
+        morseEdit.setText("");
+    }
 
     public void sendMessage(View view) {
         SmsManager manager = SmsManager.getDefault();

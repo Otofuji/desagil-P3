@@ -52,14 +52,19 @@ public class MorseTree {
         Node n = start;
         for (int i = 0; i < code.length(); i++) {
             code.charAt(i);
-            if (code.charAt(i) == '.') {
+            if (code.charAt(i) == '.' && n != null) {
                 n = n.getLeft();
-            } else {
+            } else if (n != null){
                 n = n.getRight();
             }
         }
-        return n.getValue();
-    }
+        if (n == null){
+            return ' ';
+        }
+        else{
+            return n.getValue();
+        }
+        }
 
     public LinkedList<String> getDicionario() {
         ConcurrentLinkedQueue<Node> queue = new ConcurrentLinkedQueue<>();
