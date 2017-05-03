@@ -34,11 +34,12 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void tryToGoToSendActivity(View view) {
+
+    public void tryToGoToNumberActivity(View view) {
         int permission = ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS);
 
         if(permission == PackageManager.PERMISSION_GRANTED) {
-            goToSendActivity();
+            goToNumberActivity();
         }
         else {
             String[] permissions = new String[1];
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void goToNumberActivity() {
+        Intent intent = new Intent(this, NumberActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -62,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
             else {
-                goToSendActivity();
+                goToNumberActivity();
             }
         }
     }

@@ -14,7 +14,7 @@
         android:layout_marginTop="232dp"
         android:layout_alignParentTop="true"
         android:text="Enviar"
-        android:onClick="tryToGoToSendActivity" />
+        android:onClick="tryToGoToNumberActivity" />
 
     <Button android:id="@+id/listaButton"
         android:layout_width="wrap_content"

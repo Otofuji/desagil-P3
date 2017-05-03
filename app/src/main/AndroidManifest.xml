@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="br.pro.hashi.ensino.desagil.morse">
 
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -12,18 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="br.pro.hashi.ensino.desagil.morse.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="br.pro.hashi.ensino.desagil.morse.SendActivity" />
-        <activity android:name="br.pro.hashi.ensino.desagil.morse.ListActivity">
-        </activity>
-        <activity android:name="br.pro.hashi.ensino.desagil.morse.DictActivity" />
-
+        <activity android:name=".SendActivity" />
+        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".DictActivity" />
+        <activity android:name=".NumberActivity"></activity>
     </application>
 
 </manifest>
