@@ -53,19 +53,10 @@
         android:text="Send" />
 
     <Button
-        android:id="@+id/apagar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="1"
-        android:layout_marginTop="60dp"
-        android:onClick="delete"
-        android:text="Apagar" />
-
-    <Button
         android:id="@+id/touchView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="10dp"
         android:layout_columnSpan="2"
         android:layout_gravity="center"
         android:background="@android:drawable/presence_invisible"

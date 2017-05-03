@@ -13,7 +13,7 @@ public class NumberActivity extends AppCompatActivity implements View.OnClickLis
     private EditText numberEdit;
     private EditText morseEdit;
     private Button touchView2;
-    private String string;
+    private String frase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,11 @@ public class NumberActivity extends AppCompatActivity implements View.OnClickLis
         numberEdit = (EditText) findViewById(R.id.numberEdit);
         morseEdit = (EditText) findViewById(R.id.morseEdit);
 
+        if (numberEdit.getText().toString().isEmpty()){
+            frase="";
+        }
+
+
     }
 
     public void mensagem(View view){
@@ -35,34 +40,29 @@ public class NumberActivity extends AppCompatActivity implements View.OnClickLis
         myIntent.putExtra("numero", numberEdit.getText().toString());
         startActivity(myIntent);
 
-
-
-        string = "";
-
-
     }
 
     @Override
     public void onClick(View v) {
-        string = string + '.';
+        frase = frase + '.';
         morseEdit.append(".");
-        Log.i("numberActivity", string);
+        Log.i("numberActivity", frase);
     }
 
     @Override
     public boolean onLongClick(View v) {
-        string = string + '_';
+        frase = frase + '_';
         morseEdit.append("_");
         return true;
     }
     public void wordButton (View view){
         MorseTree arvore = MorseTree.getInstancia();
-        char letra =  arvore.translate(string);
+        char letra =  arvore.translate(frase);
         String letter = Character.toString(letra);
         if (letra != ' ') {
             numberEdit.append(letter);
         }
-        string = "";
+        frase = "";
         morseEdit.setText("");
     }
 }
