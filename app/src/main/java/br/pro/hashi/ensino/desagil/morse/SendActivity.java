@@ -16,7 +16,6 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
     private EditText morseEdit;
     private String string;
     private Button touchView;
-    private Button finalPalavra;
 
 
 
