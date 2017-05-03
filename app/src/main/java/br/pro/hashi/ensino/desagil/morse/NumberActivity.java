@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -13,25 +12,30 @@ public class NumberActivity extends AppCompatActivity implements View.OnClickLis
 
     private EditText numberEdit;
     private EditText morseEdit;
-    private Button touchView;
+    private Button touchView2;
     private String string;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number);
+
+        touchView2 = (Button) findViewById(R.id.touchView2);
+        touchView2.setOnClickListener(this);
+        touchView2.setOnLongClickListener(this);
+
+        numberEdit = (EditText) findViewById(R.id.numberEdit);
+        morseEdit = (EditText) findViewById(R.id.morseEdit);
+
     }
 
     public void mensagem(View view){
-        numberEdit = (EditText) findViewById(R.id.numberEdit);
-        morseEdit = (EditText) findViewById(R.id.morseEdit);
-        Intent myIntent = new Intent(this, SendActivity.class);
+
+        Intent myIntent = new Intent(NumberActivity.this, SendActivity.class);
         myIntent.putExtra("numero", numberEdit.getText().toString());
         startActivity(myIntent);
 
-        touchView = (Button) findViewById(R.id.touchView);
-        touchView.setOnClickListener(this);
-        touchView.setOnLongClickListener(this);
+
 
         string = "";
 
@@ -42,14 +46,14 @@ public class NumberActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         string = string + '.';
         morseEdit.append(".");
-        Log.i("sendActivity", string);
+        Log.i("numberActivity", string);
     }
 
     @Override
     public boolean onLongClick(View v) {
         string = string + '_';
         morseEdit.append("_");
-        return false;
+        return true;
     }
     public void wordButton (View view){
         MorseTree arvore = MorseTree.getInstancia();

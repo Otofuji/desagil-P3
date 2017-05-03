@@ -64,7 +64,6 @@ public class SendActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     public boolean onLongClick(View v) {
-        // TODO Auto-generated method stub
         string = string + '_';
         morseEdit.append("_");
         return true;
